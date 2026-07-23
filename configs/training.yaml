@@ -1,0 +1,50 @@
+training:
+  dataset: processed/final_dataset_v1/data.yaml
+  model: configs/model.yaml
+  pretrained_checkpoint: yolo11s.pt
+  device: auto
+  epochs: 80
+  freeze_epochs: 10
+  unfreeze_epochs: 70
+  freeze_through_layer: 10
+  batch_size: 28
+  image_size: 800
+  learning_rate: 0.001
+  optimizer: AdamW
+  weight_decay: 0.0005
+  momentum: 0.9
+  scheduler: cosine
+  warmup_epochs: 3
+  workers: 6
+  cache_mode: disk
+  amp: true
+  early_stopping_patience: 20
+  checkpoint_frequency: 1
+  validation_frequency: 1
+  save_best: true
+  resume: true
+  deterministic: true
+  seed: 42
+  final_learning_rate_factor: 0.01
+  augmentation:
+    mosaic: 0.0
+    mixup: 0.0
+    copy_paste: 0.0
+    perspective: 0.0
+    shear: 0.0
+    translate: 0.03
+    scale: 0.10
+    horizontal_flip: 0.5
+    vertical_flip: 0.0
+    hsv_hue: 0.005
+    hsv_saturation: 0.15
+    hsv_value: 0.10
+loss:
+  focal:
+    enabled: true
+    gamma: 2.0
+    alpha: 0.25
+  class_weights:
+    enabled: true
+    order: [Handheld_Weapon, Explosive, Fire_Smoke, Firearm, Person]
+    values: [0.9700526884, 2.3444378534, 0.7617088526, 0.5066255330, 3.9077054907]

@@ -1,0 +1,35 @@
+augmentation:
+  seed: 42
+  person_class_id: 4
+  target_person_to_smallest_non_person_ratio: 0.60
+  source_split: train
+  person_only_images: true
+  min_bbox_visibility: 0.7
+  horizontal_flip:
+    probability: 0.5
+  brightness_contrast:
+    probability: 0.3
+    brightness_limit: 0.15
+    contrast_limit: 0.15
+  gamma:
+    probability: 0.2
+    gamma_limit: [90, 110]
+  motion_blur:
+    probability: 0.1
+    kernel_size: [3, 5]
+  gaussian_noise:
+    probability: 0.1
+    variance_limit: [5.0, 25.0]
+  random_shadow:
+    probability: 0.15
+    shadow_roi: [0.0, 0.5, 1.0, 1.0]
+  random_fog:
+    probability: 0.1
+    fog_coef_lower: 0.05
+    fog_coef_upper: 0.15
+    alpha_coef: 0.08
+  affine:
+    probability: 0.25
+    rotation_degrees: 7
+    scale_limit: 0.1
+    translation_limit: 0.05

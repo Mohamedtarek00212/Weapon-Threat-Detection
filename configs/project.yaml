@@ -1,0 +1,44 @@
+project:
+  name: weapon-threat-detection
+  seed: 42
+  original_data_dir: original
+  processed_data_dir: processed
+  reports_dir: reports
+  logs_dir: logs
+  runs_dir: runs
+
+experiments:
+  default_name: initialization
+  capture_git_revision: true
+
+dataset:
+  source_yaml: original/data.yaml
+  splits: [train, valid, test]
+  class_names:
+    - Blunt_Weapon
+    - Explosive
+    - Fire_Smoke
+    - Firearm
+    - Melee_Weapon
+    - Person
+    - Tool
+  image_extensions: [.jpg, .jpeg, .png, .bmp, .webp]
+
+validation:
+  verify_images: true
+  validate_normalized_boxes: true
+  write_per_file_records: true
+
+preparation:
+  mode: symlink
+  overwrite_processed: false
+
+engineering:
+  source_dataset: processed/cleaned_v1
+  target_dataset: processed/processed_v1
+  augmentation_config: configs/augmentation_config.yaml
+
+final_augmentation:
+  source_dataset: processed/processed_v1
+  target_dataset: processed/final_dataset_v1
+  configuration: configs/final_augmentation_config.yaml

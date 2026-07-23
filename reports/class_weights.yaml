@@ -1,0 +1,8 @@
+method: balanced_inverse_frequency
+formula: weight(class) = total_annotations / (number_of_classes * class_annotations)
+class_weights:
+  Handheld_Weapon: 0.9584423227831546
+  Explosive: 2.3183328060740274
+  Fire_Smoke: 0.7529668636013357
+  Firearm: 0.500781590344156
+  Person: 4.991570881226053

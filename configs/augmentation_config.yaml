@@ -1,0 +1,43 @@
+pipeline:
+  enabled: false
+  apply_to_dataset: false
+  bbox_format: yolo
+  horizontal_flip:
+    enabled: true
+    probability: 0.5
+  brightness:
+    enabled: true
+    probability: 0.3
+    limit: 0.2
+  contrast:
+    enabled: true
+    probability: 0.3
+    limit: 0.2
+  gamma:
+    enabled: true
+    probability: 0.2
+    gamma_limit: [80, 120]
+  motion_blur:
+    enabled: true
+    probability: 0.15
+    kernel_size: [3, 7]
+  gaussian_noise:
+    enabled: true
+    probability: 0.15
+    variance_limit: [10.0, 50.0]
+  random_shadow:
+    enabled: true
+    probability: 0.2
+    shadow_roi: [0.0, 0.5, 1.0, 1.0]
+  rotation:
+    enabled: true
+    probability: 0.25
+    limit_degrees: 10
+  scale:
+    enabled: true
+    probability: 0.25
+    limit: 0.15
+  translation:
+    enabled: true
+    probability: 0.25
+    limit: 0.1
