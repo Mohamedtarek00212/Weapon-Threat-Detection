@@ -18,7 +18,7 @@ training:
   workers: 6
   cache_mode: disk
   amp: true
-  early_stopping_patience: 20
+  early_stopping_patience: 0
   checkpoint_frequency: 1
   validation_frequency: 1
   save_best: true
