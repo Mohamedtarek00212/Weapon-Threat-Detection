@@ -1,0 +1,12 @@
+experiment:
+  name: final_yolo11s_cbam_focal
+  seed: 42
+  model_variant: yolo11s
+  training_run_limit: 1
+  full_training_approved: false
+  benchmark_batch_sizes: [8, 12, 16, 20, 24, 28, 32]
+  benchmark_iterations: 3
+  benchmark_warmup_iterations: 1
+  final_dataset: processed/final_dataset_v1
+  reports_directory: reports
+  logs_directory: logs

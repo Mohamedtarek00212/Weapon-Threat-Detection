@@ -1,0 +1,15 @@
+Metric,Value
+Total Images,131463
+Total Annotations,296419
+Number of Classes,5
+Background Images (%),9.39
+Avg Objects/Image,2.255
+Most Frequent Class,Firearm
+Least Frequent Class,Person
+Imbalance Ratio,7.71
+Small Object %,20.04
+Medium Object %,44.26
+Large Object %,35.69
+Avg Image Brightness,127.49
+Avg Blur Score,5302.25
+Annotation Issues Found,0

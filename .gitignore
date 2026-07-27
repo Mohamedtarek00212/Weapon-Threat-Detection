@@ -1,0 +1,40 @@
+# Model weights
+*.pt
+*.onnx
+
+# Python environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset folders
+original/
+processed/
+
+# YOLO outputs
+runs/
+
+# Logs
+logs/
+
+# Generated reports
+reports/*.json
+reports/*.csv
+reports/*.png
+reports/*.html
+
+# Temporary files
+~$*
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+
+# Editor
+.vscode/

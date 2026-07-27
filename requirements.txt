@@ -1,0 +1,14 @@
+# Python 3.10.11
+ultralytics>=8.3,<9
+torch>=2.2,<2.7
+torchvision>=0.17,<0.22
+pandas>=2.2,<3
+numpy>=1.26,<3
+Pillow>=10,<12
+PyYAML>=6,<7
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+jupyterlab>=4,<5
+ipykernel>=6,<7
+opencv-python>=4.9,<5
+albumentations>=1.4,<2
